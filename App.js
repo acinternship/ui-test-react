@@ -91,22 +91,80 @@ import ReactDOM from 'react-dom';
 //  }
 //}
 
+/* --- Using Child Properties and CSS Class --- */
+//class App extends React.Component {
+//	render() {
+////		return <Componente children="Rafael" /> The same
+//		return <Componente>Rafael <Heart /> React </Componente>
+//	}
+//}
+//
+//class Componente extends React.Component {
+//	render() {
+//		 return <button>{this.props.children}</button>
+//	}
+//}
+//
+//class Heart extends React.Component {
+//	render() {
+//		return <span className="glyphicon glyphicon-heart" />
+//	}
+//}
+
+/* --- Mounting and unMounting --- */
 class App extends React.Component {
+	constructor() {
+		super();
+		this.state = { val: 0 };
+		this.update = this.update.bind(this);
+	}
+	
+	update() {
+		this.setState({val: this.state.val + 1});
+	}
+	componentWillMount() {
+		// Printed only one time. When the browser is prepared to show the component
+		console.log("Mounting...");
+	}
+	
+	componentDidMount() {
+		// Printed only one time. When the browser already mounted the component on the DOM
+		console.log("Mounted!");
+	}
 	render() {
-//		return <Componente children="Rafael" /> The same
-		return <Componente>Rafael <Heart /> React </Componente>
+		// When the component is updated, the console prints Rendering
+		console.log("Rendering...");
+		return <button onClick={this.update}>{this.state.val}</button>	
+	}
+	
+	componentWillUnmount() {
+		// Printed each time that the component is unmounted. In other words, when the component is removed of the DOM
+		console.log("Unmounting...");
 	}
 }
 
-class Componente extends React.Component {
+class Wrapper extends React.Component {
+	constructor() {
+		super();
+	}
+	
+	mount() {
+		ReactDOM.render(<App />, document.getElementById('a'));
+	}
+	
+	unmount() {
+		ReactDOM.unmountComponentAtNode(document.getElementById('a'));
+	}
+	
 	render() {
-		 return <button>{this.props.children}</button>
+		return (
+			<div>
+				<button onClick={this.mount}>Mount</button>
+				<button onClick={this.unmount}>UnMount</button>
+				<div id="a"></div>
+			</div>
+		)
 	}
 }
 
-class Heart extends React.Component {
-	render() {
-		return <span className="glyphicon glyphicon-heart" />
-	}
-}
-export default App
+export default Wrapper
