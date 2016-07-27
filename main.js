@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './App';
+import Header from './Header';
+import SideMenu from './SideMenu';
 
-ReactDOM.render(<App />, document.getElementById('app'))
+//ReactDOM.render(<Header />, document.getElementById('rowHeader'))
+ReactDOM.render(<SideMenu />, document.getElementById('sideMenu'))

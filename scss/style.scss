@@ -1,0 +1,71 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:100,300,400';
+@import 'https://fonts.googleapis.com/css?family=Lato';
+
+body, html {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+#sideMenu {
+	height: 100vh;
+	background-color: #263949;
+	color: #fff;
+	
+	padding-left: 0px;
+	padding-right: 0px;
+	
+	#menu {
+		height: -webkit-calc(100% - 15px);
+  		height: -moz-calc(100% - 15px);
+  		height: calc(100% - 15px);
+		
+		margin-top: 15px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		background-color: #2f4050;
+		
+		.item-menu {
+			height: 40px;
+			line-height: 40px;
+			padding-left: 25px;
+			
+			a {
+				color: #a7b1c2;
+				text-decoration: none;
+			}
+			
+			&:hover {
+				background-color: #263949;
+				color: #fff;
+				
+				a {
+					color: #fff;
+				}
+			}
+		}
+	}
+	
+	#user-info {
+//		padding-left: 25px;
+		text-align: center;
+
+		.img {
+			width: 50px;
+			margin-top: 30px;
+		}
+	}
+
+}
+
+#content {
+	height: 100vh;
+	background-color: #f3f3f4;
+	color: #6f7274;
+	
+	.card {
+		background-color: #fff;
+		color: #a7b1c2;
+		font-weight: 200;
+	}
+}
