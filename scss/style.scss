@@ -10,6 +10,10 @@ body, html {
 		margin: 0 !important;
 		padding: 0 !important;
 	}
+	
+	.float-right {
+		float: right;
+	}
 }
 
 #sideMenu {
@@ -93,9 +97,10 @@ body, html {
 		.icons {
 			display: flex;
 			justify-content: flex-end;
+			align-items: center;
 			.icon {
-				margin-right: 15px;
-			}
+				margin-left: 15px;
+			}	
 		}
 		
 		
