@@ -4,6 +4,9 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif; }
+  body .m-p-zero, html .m-p-zero {
+    margin: 0 !important;
+    padding: 0 !important; }
 
 #sideMenu {
   height: 100vh;
@@ -31,6 +34,8 @@ body, html {
         color: #fff; }
         #sideMenu #menu .item-menu:hover a {
           color: #fff; }
+      #sideMenu #menu .item-menu .material-icons {
+        margin-right: 10px !important; }
   #sideMenu #user-info {
     text-align: center; }
     #sideMenu #user-info .img {
@@ -41,6 +46,24 @@ body, html {
   height: 100vh;
   background-color: #f3f3f4;
   color: #6f7274; }
+  #content #header {
+    background-color: #fff;
+    color: #263949;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center; }
+    #content #header .message {
+      display: flex;
+      justify-content: flex-start; }
+      #content #header .message p {
+        font-family: 'Roboto'; }
+    #content #header .icons {
+      display: flex;
+      justify-content: flex-end; }
+      #content #header .icons .icon {
+        margin-right: 15px; }
   #content .card {
     background-color: #fff;
     color: #a7b1c2;

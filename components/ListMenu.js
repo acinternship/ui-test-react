@@ -1,6 +1,8 @@
-class SideMenu extends React.Component {
+import ListItem from './ListItem';
+
+class ListMenu extends React.Component {
 	constructor(props) {
-		super(props);
+		super(props)
 		this.state = {
 			website: "CMS",
 			user: {
@@ -12,46 +14,55 @@ class SideMenu extends React.Component {
 				{
 					label: "Dashboard", 
 					icon: "picture_in_picture",
-					href: "page.html"
+					href: "page.html",
+					isDropdown: "true"
 				},
 				{
 					label: "Posts", 
 					icon: "note_add",
-					href: "page.html"
+					href: "page.html",
+					isDropdown: "false"
 				},
 				{
 					label: "Category", 
 					icon: "library_books",
-					href: "page.html"
+					href: "page.html",
+					isDropdown: "false"
 				},
 				{
 					label: "Users", 
 					icon: "supervisor_account",
-					href: "page.html"
+					href: "page.html",
+					isDropdown: "false"
 				},
 				{
 					label: "Groups", 
 					icon: "store",
-					href: "page.html"
+					href: "page.html",
+					isDropdown: "false"
 				},
 				{
 					label: "Statics", 
 					icon: "insert_chart",
-					href: "page.html"
+					href: "page.html",
+					isDropdown: "false"
 				},
 				{
 					label: "Settings", 
 					icon: "settings",
-					href: "page.html"
+					href: "page.html",
+					isDropdown: "false"
 				}
     		]
 		}	
 	}
+	
 	render() {
+		
 		let rows = this.state.data.map(item => {
-			return <ItemSideMenu key={item.label} data={item}/>
+			return <ListItem key={item.label} data={item}/>
 		})
-
+		
 		return (
 			<div>
 				<div id="user-info" className="row">
@@ -67,17 +78,4 @@ class SideMenu extends React.Component {
 	}
 }
 
-class ItemSideMenu extends React.Component {
-
-	render() {
-		return (
-			<div className="item-menu">
-				<a href={this.props.data.href}>
-					<i className="tiny material-icons">{this.props.data.icon}</i> {this.props.data.label}
-				</a>
-			</div>
-		)
-	}
-}
-
-export default SideMenu;
+export default ListMenu;
