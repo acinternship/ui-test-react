@@ -10,5 +10,3 @@ ReactDOM.render(<ListMenu />, document.getElementById('sideMenu'))
 ReactDOM.render(<Header />, document.getElementById('header'))
 ReactDOM.render(<ListPost />, document.getElementById('PostList'))
 ReactDOM.render(<NewPostForm />, document.getElementById('formNewPostBox'))
-
-export default Main

@@ -19,13 +19,11 @@ class NewPostForm extends React.Component {
 			category: category,
 			description: description
 		}
-		   
+		//window.location.href = "posts.html";
     	DataBase.addPost(obj);
-		console.log(DataBase.getPosts())
-		
-		window.location.href = "posts.html";
-		
+		console.log(DataBase.getPosts())		
 	}
+	
 	render() {
 		return(
 			<form id="formNewPost" class="col s12" action="posts.html">

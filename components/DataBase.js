@@ -72,7 +72,7 @@ const db = {
     ],
 	lastIdPost: 0,
 	numberOfChats: 1,
-	numberOfNotifications: 4,
+	numberOfNotifications: 5,
 	category: [
 		"The Opinion Pages",
 		"RIO 2016",
@@ -121,8 +121,8 @@ export default {
 	},
 	
 	addPost: (post) => {
+		post.id = (db.posts.length)
 		db.posts.push(post)
-		db.lastIdPost = +(db.lastIdPost + 1)
 	},
 	
 	getPosts: () => {

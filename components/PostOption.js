@@ -1,5 +1,4 @@
 import ListPost from './ListPost';
-import DataBase from './DataBase';
 
 class PostOption extends React.Component {
 
