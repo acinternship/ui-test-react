@@ -4,6 +4,8 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif; }
+  body .hidden, html .hidden {
+    display: none; }
   body .m-p-zero, html .m-p-zero {
     margin: 0 !important;
     padding: 0 !important; }
@@ -19,6 +21,19 @@ body, html {
     background-color: #263949; }
     body .btn-Add:hover, html .btn-Add:hover {
       background-color: #6188a9; }
+  body #btn-Post, html #btn-Post {
+    width: 100%;
+    height: 30px;
+    background-color: #263949;
+    color: white;
+    padding: 30px; }
+  body .main-color-button, html .main-color-button {
+    background-color: #263949;
+    margin-top: 15px;
+    float: right;
+    margin-right: 20px; }
+    body .main-color-button:hover, html .main-color-button:hover {
+      background-color: #263949; }
 
 #sideMenu {
   height: 100vh;
@@ -57,7 +72,8 @@ body, html {
 #content {
   height: 100vh;
   background-color: #f3f3f4;
-  color: #6f7274; }
+  color: #6f7274;
+  overflow: scroll; }
   #content #header {
     background-color: #fff;
     color: #263949;
@@ -84,5 +100,32 @@ body, html {
   #content #PostsOptions {
     margin-right: 30px;
     margin-bottom: 15px; }
+  #content .newPostBg {
+    background-color: #fff !important;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin: 20px;
+    /* label color */
+    /* label focus color */
+    /* label underline focus color */
+    /* valid color */
+    /* invalid color */
+    /* icon prefix focus color */ }
+    #content .newPostBg .input-field label {
+      color: #263949; }
+    #content .newPostBg .input-field input[type=text]:focus + label {
+      color: #263949; }
+    #content .newPostBg .input-field input[type=text]:focus {
+      border-bottom: 1px solid #263949;
+      box-shadow: 0 1px 0 0 #263949; }
+    #content .newPostBg .input-field input[type=text].valid {
+      border-bottom: 1px solid #263949;
+      box-shadow: 0 1px 0 0 #263949; }
+    #content .newPostBg .input-field input[type=text].invalid {
+      border-bottom: 1px solid #263949;
+      box-shadow: 0 1px 0 0 #263949; }
+    #content .newPostBg .input-field .prefix.active {
+      color: #263949; }
 
 /*# sourceMappingURL=style.css.map */
