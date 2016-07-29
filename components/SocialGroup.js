@@ -1,35 +1,39 @@
 import SocialIcons from './SocialIcons';
 
 class SocialGroup extends React.Component {
+
 	constructor(props) {
 		super(props)
 		this.state = {
-			db: {
-				chat: 0,
-				notification: 0
-			},
-			numberOfChats: 0,
-			numberOfNotifications: 0
+			"numberOfChats": 0,
+			"numberOfNotifications": 0
 		}
+		this.getNotification = this.getNotification.bind(this)
 	}
 	
 	componentWillMount() {
-		var dbChat = this.state.db.chat
-		var dbNotification = this.state.db.notification
+		var dbNotification = this.props.numberOfNotifications
+		var dbChats = this.props.numberOfChats
 		
-		this.setState({numberOfChats: dbChat});
+		this.setState({numberOfChats: dbChats});
 		this.setState({numberOfNotifications: dbNotification});
+	}
+	
+	getNotification() {
+		this.setState({numberOfChats: 3});
 	}
 	
 	render() {
 		return(
-			<div className="icons row">
-				<SocialIcons icon="question_answer" number={this.state.numberOfNotifications} />
-				
-				<SocialIcons icon="comment" number={this.state.numberOfChats} />
-				
-				<SocialIcons icon="search" />
-			</div>
+			<div id="SocialGroup" className="icons col s2">
+				<div className="icons row">
+					<SocialIcons icon="question_answer" number={this.state.numberOfNotifications} />
+
+					<SocialIcons icon="comment" number={this.state.numberOfChats} />
+
+					<SocialIcons icon="search" click={this.getNotification}/>
+				</div>
+			</div>	
 		)
 	}
 }

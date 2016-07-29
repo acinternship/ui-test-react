@@ -1,4 +1,4 @@
-class ListItem extends React.Component {
+class ListMenuItem extends React.Component {
 	render() {
 		return (
 			<div className="item-menu">
@@ -11,4 +11,4 @@ class ListItem extends React.Component {
 	}
 }
 
-export default ListItem;
+export default ListMenuItem;

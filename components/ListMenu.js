@@ -1,4 +1,4 @@
-import ListItem from './ListItem';
+import ListMenuItem from './ListMenuItem';
 
 class ListMenu extends React.Component {
 	constructor(props) {
@@ -14,13 +14,13 @@ class ListMenu extends React.Component {
 				{
 					label: "Dashboard", 
 					icon: "picture_in_picture",
-					href: "page.html",
+					href: "index.html",
 					isDropdown: "true"
 				},
 				{
 					label: "Posts", 
 					icon: "note_add",
-					href: "page.html",
+					href: "posts.html",
 					isDropdown: "false"
 				},
 				{
@@ -60,7 +60,7 @@ class ListMenu extends React.Component {
 	render() {
 		
 		let rows = this.state.data.map(item => {
-			return <ListItem key={item.label} data={item}/>
+			return <ListMenuItem key={item.label} data={item}/>
 		})
 		
 		return (

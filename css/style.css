@@ -9,6 +9,16 @@ body, html {
     padding: 0 !important; }
   body .float-right, html .float-right {
     float: right; }
+  body .flex, html .flex {
+    display: flex; }
+  body .title, html .title {
+    font-weight: bold !important; }
+  body .secondary-content, html .secondary-content {
+    color: #263949; }
+  body .btn-Add, html .btn-Add {
+    background-color: #263949; }
+    body .btn-Add:hover, html .btn-Add:hover {
+      background-color: #6188a9; }
 
 #sideMenu {
   height: 100vh;
@@ -71,5 +81,8 @@ body, html {
     background-color: #fff;
     color: #a7b1c2;
     font-weight: 200; }
+  #content #PostsOptions {
+    margin-right: 30px;
+    margin-bottom: 15px; }
 
 /*# sourceMappingURL=style.css.map */

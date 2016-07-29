@@ -14,6 +14,26 @@ body, html {
 	.float-right {
 		float: right;
 	}
+	
+	.flex {
+		display: flex;
+	}
+	
+	.title {
+		font-weight: bold !important;
+	}
+	
+	.secondary-content {
+		color: #263949;
+	}
+	
+	.btn-Add {
+		background-color: #263949;
+		
+		&:hover {
+			background-color: #6188a9;
+		}
+	}
 }
 
 #sideMenu {
@@ -109,5 +129,10 @@ body, html {
 		background-color: #fff;
 		color: #a7b1c2;
 		font-weight: 200;
+	}
+	
+	#PostsOptions {
+		margin-right:30px;
+		margin-bottom:15px;
 	}
 }
