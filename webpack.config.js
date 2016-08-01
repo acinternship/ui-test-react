@@ -1,8 +1,14 @@
+var path = require("path");
+
 module.exports = {
-  	entry: './main.js',
+	entry: {
+		mainJS: "./js/main.js",
+		listPostJS: "./js/ListPost.js",
+		newPostJS: "./js/NewPost.js"
+	},
 	output: {
-		path: './',
-		filename: 'index.js'
+	  path: path.join(__dirname, "dist"),
+	  filename: "[name].entry.js"
 	},
   devServer: {
     inline: true,
