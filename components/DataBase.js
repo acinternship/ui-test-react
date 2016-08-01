@@ -42,7 +42,7 @@ const db = {
 		{
 			label: "Category", 
 			icon: "library_books",
-			href: "page.html",
+			href: "category.html",
 			isDropdown: "false"
 		},
 		{
@@ -74,10 +74,26 @@ const db = {
 	numberOfChats: 1,
 	numberOfNotifications: 5,
 	category: [
-		"The Opinion Pages",
-		"RIO 2016",
-		"Síria",
-		"News"
+		{
+			id: 0,
+			label: "The Opinion Pages",
+			status: 0
+		},
+		{
+			id: 1,
+			label: "RIO 2016",
+			status: 0
+		},
+		{
+			id: 2,
+			label: "Síria",
+			status: 0
+		},
+		{
+			id: 3,
+			label: "News",
+			status: 0
+		}
 	],
 	posts: [
 		{
@@ -91,6 +107,22 @@ const db = {
 } 
 
 export default {
+	
+	addCategory: (category) => {
+		category.id = (db.category.length)
+		db.category.push(category)
+	},
+	
+	deleteCategory: (id) => {
+		var categoryList = db.category
+		
+		categoryList[id].status = 1
+		
+		return true
+	},
+	getCategoryList: () => {
+		return(db.category)
+	},
 	
 	getItensMenu: () => {
 		return(db.menuData)
