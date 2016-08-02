@@ -11,19 +11,36 @@ const db = {
 			id: 0,
 			name: "Rafael Câmara",
 			role: "Intern - Job Rotation",
-			picture: "images/perfil.png"
+			picture: "images/perfil.png",
+			status: 0
 		},
 		{
 			id: 1,
 			name: "Diogo Perillo",
-			role: "UI",
-			picture: "images/perfil.png"
+			role: ".NET Engineer",
+			picture: "images/perfil.png",
+			status: 0
 		},
 		{
 			id: 2,
 			name: "Igor Ribeiro",
-			role: "UI",
-			picture: "images/perfil.png"
+			role: "UI Engineer",
+			picture: "images/perfil.png",
+			status: 0
+		},
+		{
+			id: 3,
+			name: "Gabriel Bessa",
+			role: "Intern - Job Rotation",
+			picture: "images/perfil.png",
+			status: 0
+		},
+		{
+			id: 4,
+			name: "Louise Bordeaux",
+			role: "Intern - Job Rotation",
+			picture: "images/perfil.png",
+			status: 0
 		}
 	],
 	menuData: [
@@ -48,7 +65,7 @@ const db = {
 		{
 			label: "Users", 
 			icon: "supervisor_account",
-			href: "page.html",
+			href: "users.html",
 			isDropdown: "false"
 		},
 		{
@@ -108,6 +125,14 @@ const db = {
 
 export default {
 	
+	getAllUsers: () => {
+		return(db.allUsers)
+	},
+	deleteUser: (id) => {
+		db.allUsers[id].status = 1
+		console.log(db.allUsers)
+	},
+	
 	addCategory: (category) => {
 		category.id = (db.category.length)
 		db.category.push(category)
@@ -115,10 +140,7 @@ export default {
 	
 	deleteCategory: (id) => {
 		var categoryList = db.category
-		
 		categoryList[id].status = 1
-		
-		return true
 	},
 	getCategoryList: () => {
 		return(db.category)

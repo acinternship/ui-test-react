@@ -129,5 +129,8 @@ body, html {
       color: #263949; }
   #content #CategoryOptions {
     margin-top: 10px; }
+  #content #ListUsers {
+    background-color: white;
+    margin-top: 30px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -27,10 +27,10 @@ class ListCategory extends React.Component {
 	}
 	
 	deleteCategory(idToRemove) {
+		DataBase.deleteCategory(idToRemove)
+		
 		var dbCategoryList = DataBase.getCategoryList()
-		
-		dbCategoryList[idToRemove].status = 1
-		
+				
 		this.setState({categoryList: DataBase.getCategoryList()})
 	}
 	

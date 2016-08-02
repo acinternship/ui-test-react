@@ -5,7 +5,8 @@ module.exports = {
 		mainJS: "./js/main.js",
 		listPostJS: "./js/ListPost.js",
 		newPostJS: "./js/NewPost.js",
-		categoryJS: "./js/ListCategory.js"
+		categoryJS: "./js/ListCategory.js",
+		listUsersJS: "./js/ListUsers.js"
 	},
 	output: {
 	  path: path.join(__dirname, "dist"),
